@@ -1,0 +1,27 @@
+{
+  "name": "calculatorgrupp8",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/app.js",
+    "test": "vitest",
+    "test:run":"vitest run"
+  },
+
+  "devDependencies": {
+    "vitest": "^4.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreaVilselius/CalculatorGrupp8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "bugs": {
+    "url": "https://github.com/andreaVilselius/CalculatorGrupp8/issues"
+  },
+  "homepage": "https://github.com/andreaVilselius/CalculatorGrupp8#readme"
+}

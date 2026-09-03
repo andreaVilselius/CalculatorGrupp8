@@ -18,6 +18,21 @@ function calculate() {
   }
 }
 
+function squareRoot() {
+  try {
+    let value = parseFloat(display.value);
+    let result = Math.sqrt(value);
+
+    if (isNaN(result)) {
+      throw new Error("Invalid input");
+    }
+    display.value = parseFloat(result).toFixed(2);
+  } catch (error) {
+    display.value = "E";
+    display.style.color = "red";
+  }
+}
+
 // ==============================================================================
 // Förklarning!
 // 1. const display = document.getElementById("display");

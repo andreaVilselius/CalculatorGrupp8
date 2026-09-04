@@ -98,6 +98,44 @@ describe("testa miniräknare", () => {
     expect(display.value).toBeCloseTo(expectedResult);
   });
 
+  //test 5
+  test("testa division med positiva tal ", () => {
+    //arrange
+    document.body.innerHTML = `<input id="display"/>`;
+
+    eval(indexJs);
+    //act
+    appendToDisplay("10");
+    appendToDisplay("/");
+    appendToDisplay("2");
+    calculate();
+
+    const expectedResult = "5.00";
+
+    //assert
+    const display = document.getElementById("display");
+    expect(display.value).toBe(expectedResult);
+  });
+
+  //test 6
+  test("testa division med noll ", () => {
+    //arrange
+    document.body.innerHTML = `<input id="display"/>`;
+
+    eval(indexJs);
+    //act
+    appendToDisplay("10");
+    appendToDisplay("/");
+    appendToDisplay("0");
+    calculate();
+
+    const expectedResult = "Infinity";
+
+    //assert
+    const display = document.getElementById("display");
+    expect(display.value).toBe(expectedResult);
+  });
+
   test("testa squareRooten av ett positivt tal", () => {
     //arrange
     document.body.innerHTML = `<input id="display" />`;

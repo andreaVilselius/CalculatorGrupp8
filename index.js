@@ -36,6 +36,7 @@ function squareRoot() {
 window.appendToDisplay = appendToDisplay;
 window.clearDisplay = clearDisplay;
 window.calculate = calculate;
+window.squareRoot = squareRoot;
 
 // ==============================================================================
 // Förklarning!

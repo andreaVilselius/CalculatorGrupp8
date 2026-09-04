@@ -28,7 +28,7 @@ function squareRoot() {
     }
     display.value = parseFloat(result).toFixed(2);
   } catch (error) {
-    display.value = "E";
+    display.value = "Error";
     display.style.color = "red";
   }
 }

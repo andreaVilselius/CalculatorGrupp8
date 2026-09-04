@@ -149,4 +149,18 @@ describe("testa miniräknare", () => {
     const display = document.getElementById("display");
     expect(display.value).toBe("3.00");
   });
+
+  test("testa squareRooten av ett negativt tal", () => {
+    //arrange
+    document.body.innerHTML = `<input id="display"/>`;
+    eval(indexJs);
+
+    //act
+    appendToDisplay("-9");
+    squareRoot();
+
+    //assert
+    const display = document.getElementById("display");
+    expect(display.value).toBe("Error");
+  });
 });

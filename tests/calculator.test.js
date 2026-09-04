@@ -7,25 +7,7 @@ const indexJs = fs.readFileSync(path.resolve("index.js"), "utf-8");
 
 describe("testa miniräknare", () => {
   //test 1
-  test("ska lägga till 8 i displayen", () => {
-    // Arrange
-    document.body.innerHTML = `
-      <input id="display" />
-    `;
-    //tar textsträng och försöker köra som js kod
-    eval(indexJs);
-
-    // Act
-    appendToDisplay("8");
-
-    // Assert
-    const display = document.getElementById("display");
-
-    expect(display.value).toBe("8");
-  });
-
-  //test 2
-  test("testa addition i display ", () => {
+  test("testa addition med positiva tal ", () => {
     //arrange
     document.body.innerHTML = `
       <input id="display" />
@@ -36,22 +18,22 @@ describe("testa miniräknare", () => {
 
     //act
 
-    appendToDisplay("5");
+    appendToDisplay("2");
     appendToDisplay("+");
-    appendToDisplay("4");
+    appendToDisplay("3");
 
     calculate();
 
-    const expectedResult = "9";
+    const expectedResult = "5";
 
     //assert
     const display = document.getElementById("display");
     expect(display.value).toBeCloseTo(expectedResult);
   });
 
-  //test 3
+  //test 2
 
-  test("testa subtraktion i display", () => {
+  test("testa subtraktion med positiva termer", () => {
     //arrange
     document.body.innerHTML = `
       <input id="display" />
@@ -61,12 +43,55 @@ describe("testa miniräknare", () => {
     eval(indexJs);
 
     //act
-    appendToDisplay("3");
+    appendToDisplay("10");
     appendToDisplay("-");
-    appendToDisplay("2");
+    appendToDisplay("4");
     calculate();
 
-    const expectedResult = "1";
+    const expectedResult = "6";
+
+    //assert
+    const display = document.getElementById("display");
+    expect(display.value).toBeCloseTo(expectedResult);
+  });
+
+  //test 3
+
+  test("testa subtraktion med negativ term ", () => {
+    //arrange
+    document.body.innerHTML = `
+      <input id="display" />
+
+    `;
+    //hämtar funktioner i js fil
+    eval(indexJs);
+
+    //act
+    appendToDisplay("-2");
+    appendToDisplay("-");
+    appendToDisplay("3");
+    calculate();
+
+    const expectedResult = "-5";
+
+    //assert
+    const display = document.getElementById("display");
+    expect(display.value).toBeCloseTo(expectedResult);
+  });
+
+  //test 4
+  test("testa multiplikation med positiva tal ", () => {
+    //arrange
+    document.body.innerHTML = `<input id="display"/>`;
+
+    eval(indexJs);
+    //act
+    appendToDisplay("5");
+    appendToDisplay("*");
+    appendToDisplay("3");
+    calculate();
+
+    const expectedResult = "15";
 
     //assert
     const display = document.getElementById("display");

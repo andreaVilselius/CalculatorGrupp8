@@ -64,9 +64,9 @@ button {
 }
 
 #clear {
-  grid-column: span 4;
+  grid-column: span 3;
   background-color: red;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 button:hover {

@@ -4,12 +4,17 @@ export default [
   js.configs.recommended,
   {
     languageOptions: {
-      globals: { document: "readonly" },
+      globals: {
+        document: "readonly",
+        window: "readonly",
+        appendToDisplay: "readonly",
+        clearDisplay: "readonly",
+        calculate: "readonly",
+        squareRoot: "readonly",
+      },
     },
     rules: {
-      "no-unused-vars": "off",
+      "no-unused-vars": "warn",
     },
   },
 ];
-
-//installerar detta npm install --save-dev eslint @eslint/js

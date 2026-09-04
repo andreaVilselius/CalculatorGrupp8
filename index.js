@@ -33,6 +33,10 @@ function squareRoot() {
   }
 }
 
+window.appendToDisplay = appendToDisplay;
+window.clearDisplay = clearDisplay;
+window.calculate = calculate;
+
 // ==============================================================================
 // Förklarning!
 // 1. const display = document.getElementById("display");

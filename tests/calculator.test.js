@@ -33,7 +33,7 @@ describe("testa miniräknare", () => {
 
   //test 2
 
-  test("testa subtraktion med positiva termer", () => {
+  test("testa subtraktion med positiva tal", () => {
     //arrange
     document.body.innerHTML = `
       <input id="display" />
@@ -57,7 +57,7 @@ describe("testa miniräknare", () => {
 
   //test 3
 
-  test("testa subtraktion med negativ term ", () => {
+  test("testa subtraktion med negativ tal ", () => {
     //arrange
     document.body.innerHTML = `
       <input id="display" />
@@ -135,7 +135,7 @@ describe("testa miniräknare", () => {
     const display = document.getElementById("display");
     expect(display.value).toBe(expectedResult);
   });
-
+  //test 7
   test("testa squareRooten av ett positivt tal", () => {
     //arrange
     document.body.innerHTML = `<input id="display" />`;
@@ -149,7 +149,7 @@ describe("testa miniräknare", () => {
     const display = document.getElementById("display");
     expect(display.value).toBe("3.00");
   });
-
+  //test 8
   test("testa squareRooten av ett negativt tal", () => {
     //arrange
     document.body.innerHTML = `<input id="display"/>`;
